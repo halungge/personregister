@@ -6,7 +6,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.4.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.6.RELEASE")
         classpath "gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.22.1"
     }
 }
@@ -36,32 +36,29 @@ jar {
 }
 
 
-
-bootJar {
-    classifier = 'boot'
-    baseName = 'preg'
-}
-
 sourceCompatibility = 11.0
 
 
 test {
     useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web") {
         exclude module: "spring-boot-starter-tomcat"
     }
-    compile "org.eclipse.jetty:jetty-webapp:9.+"
-    //compile "org.eclipse.jetty:jetty-jsp:9.+"
+    compile ("org.eclipse.jetty:jetty-webapp:9.+",
     //compile 'io.reactivex.rxjava:rxjava:2.2.8'
+    )
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
-
-
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+    testImplementation(
+            'org.hamcrest:hamcrest-library:2.1',
+            'org.junit.jupiter:junit-jupiter:5.5.1',
+    )
 }
 
 /*def dockerContext = "./docker"
