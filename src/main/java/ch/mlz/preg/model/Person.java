@@ -1,5 +1,8 @@
 package ch.mlz.preg.model;
 
+import com.fasterxml.jackson.annotation.JsonTypeId;
+import org.springframework.data.annotation.Id;
+
 public class Person {
     private long id;
     private String name;
@@ -14,6 +17,7 @@ public class Person {
         this.gender = gender;
     }
 
+    @Id
     public long getId() {
         return id;
     }

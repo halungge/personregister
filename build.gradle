@@ -51,7 +51,9 @@ dependencies {
         exclude module: "spring-boot-starter-tomcat"
     }
     compile ("org.eclipse.jetty:jetty-webapp:9.+",
-    //compile 'io.reactivex.rxjava:rxjava:2.2.8'
+    //compile 'io.reactivex.rxjava:rxjava:2.2.8',
+            "org.springframework.boot:spring-boot-starter-data-rest",
+            "org.springframework.boot:spring-boot-starter-data-mongodb"
     )
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
