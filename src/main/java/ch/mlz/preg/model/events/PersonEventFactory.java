@@ -1,4 +1,6 @@
-package ch.mlz.preg.model;
+package ch.mlz.preg.model.events;
+
+import ch.mlz.preg.model.Person;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

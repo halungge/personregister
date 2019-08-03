@@ -1,10 +1,16 @@
 package ch.mlz.preg.model;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Address {
+    @JsonProperty("street")
     private String street;
+    @JsonProperty("place")
     private String place;
+    @JsonProperty("zip")
     private Long zipCode;
+    @JsonProperty("housenr")
     private Long houseNumber;
 
     public Address(String street, Long houseNumber, Long zipCode, String place) {

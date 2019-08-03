@@ -2,10 +2,12 @@ package ch.mlz.preg;
 
 import ch.mlz.preg.model.Address;
 import ch.mlz.preg.model.Person;
+import ch.mlz.preg.model.events.PersonEventFactory;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -14,6 +16,7 @@ public class EventsController {
 
     @PostMapping("/birth")
     public void birth(Person father, Person mother, Person child){
+        PersonEventFactory.birth(LocalDateTime.now(), "me", child.getBirthday(), child);
 
     }
 
