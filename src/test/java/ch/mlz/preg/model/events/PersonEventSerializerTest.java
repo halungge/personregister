@@ -22,7 +22,7 @@ class PersonEventSerializerTest {
     public void setup(){
         mapper = new PersonEventSerializer();
         nameChangeAsJson = "{\"creation_time\":\"2019-08-02T12:12:12\",\"valid_from\":\"2000-02-02\",\"user\":\"Harry\",\"event_type\":\"CHANGE_NAME\",\"person\":23,\"data\":" +
-                "{\"firstname\":\"Hermione\",\"lastname\":\"Granger\"}}";
+                "{\"firstname\":\"Hermione\",\"lastname\":\"Granger\"},\"history_status\":\"APPLICABLE\"}";
     }
 
     @Test

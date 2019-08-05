@@ -13,7 +13,8 @@ public class ChangeName extends PersonEvent {
         setLastName(lastName);
         setFirstName(firstName);
     }
-    private ChangeName(){
+
+    private ChangeName() {
         super();
     }
 
@@ -24,6 +25,5 @@ public class ChangeName extends PersonEvent {
     private void setLastName(String lastName) {
         putData("lastname", lastName);
     }
-
 
 }

@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 
 public class PersonEventFactory {
    public static PersonEvent birth(LocalDateTime createdOn, String createdBy, LocalDate birthday, Person person){
+
        return new Birth(createdOn, createdBy, birthday, person);
    }
 

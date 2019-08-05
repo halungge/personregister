@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import java.time.LocalDate;
 
 public class Person {
-    private long id;
+    private Long id;
     @JsonProperty("lastname")
     private String name;
     @JsonProperty("firstname")
@@ -29,7 +29,7 @@ public class Person {
     private Person(){}
 
     @Id
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -55,5 +55,9 @@ public class Person {
 
     public LocalDate getBirthday() {
         return birthday;
+    }
+
+    public void setId(long l) {
+        this.id = l;
     }
 }

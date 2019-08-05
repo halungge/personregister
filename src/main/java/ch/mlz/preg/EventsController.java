@@ -14,6 +14,8 @@ import java.util.List;
 @RequestMapping("/persons/events")
 public class EventsController {
 
+    private EventsService service;
+
     @PostMapping("/birth")
     public void birth(Person father, Person mother, Person child){
         PersonEventFactory.birth(LocalDateTime.now(), "me", child.getBirthday(), child);
@@ -27,7 +29,7 @@ public class EventsController {
 
     @PostMapping("/change/name")
     public void changeName(Person person, String name, String firstName){
-
+        //service.save(event);
     }
     @PostMapping("/change/birthday")
     public void changeBirthday(Person person, java.time.LocalDate date){
