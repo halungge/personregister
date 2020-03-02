@@ -29,6 +29,6 @@ public class PersonEventSerializer {
     }
 
     public PersonEvent parseFromString(String nameChangeAsJson) throws IOException {
-        return mapper.readValue(nameChangeAsJson, ChangeName.class);
+        return mapper.readValue(nameChangeAsJson, NameChanged.class);
     }
 }

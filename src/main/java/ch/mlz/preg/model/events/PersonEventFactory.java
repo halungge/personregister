@@ -15,6 +15,6 @@ public class PersonEventFactory {
 
 
     public static PersonEvent changeName(LocalDateTime createdOn, String createdBy, LocalDate validFrom, Person validFor, String firstName, String lastName) {
-        return new ChangeName(createdOn, createdBy, validFrom, validFor, firstName, lastName);
+        return new NameChanged(createdOn, createdBy, validFrom, validFor, firstName, lastName);
    }
 }

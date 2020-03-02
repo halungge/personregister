@@ -63,7 +63,7 @@ dependencies {
     )
 }
 
-/*def dockerContext = "./docker"
+def dockerContext = "./docker"
 def appPath= "jars"
 
 task copyJar(type: Copy){
@@ -74,4 +74,4 @@ task copyJar(type: Copy){
 }
 
 build.finalizedBy(copyJar)
-*/
+
