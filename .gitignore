@@ -3,3 +3,7 @@ personregister.iml
 personregister.ipr
 .idea
 .gradle
+gradle
+gradlew
+gradlew.bat
+build
